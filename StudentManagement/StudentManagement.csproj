@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="Migrations\V2__AddMiddleName.sql" />
+  </ItemGroup>
+
 </Project>
