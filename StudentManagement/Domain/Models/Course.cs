@@ -10,6 +10,6 @@ namespace StudentManagement.Domain.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public int Credits { get; set; }
+        public decimal Credits { get; set; }
     }
 }
