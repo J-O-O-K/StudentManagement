@@ -14,6 +14,8 @@ namespace StudentManagement.Infrastructure.Data
         public DbSet<Course> Courses => Set<Course>();
         public DbSet<Enrollment> Enrollments => Set<Enrollment>();
         public DbSet<Instructor> Instructors => Set<Instructor>();
+        public DbSet<Department> Departments => Set<Department>();
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
