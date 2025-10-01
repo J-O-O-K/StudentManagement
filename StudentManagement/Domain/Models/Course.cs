@@ -13,5 +13,8 @@ namespace StudentManagement.Domain.Models
         public int Credits { get; set; }  
 
         public ICollection<Enrollment>? Enrollments { get; set; }
+
+        public int InstructorId { get; set; } // FK
+        public Instructor? Instructor { get; set; }
     }
 }
