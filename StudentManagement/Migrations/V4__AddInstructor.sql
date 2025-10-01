@@ -1,15 +1,15 @@
--- V4: Schema with Instructors table and Course.InstructorId FK
+-- V5: Schema with Enrollments.FinalGrade (renamed from Grade)
 
 IF DB_ID('StudentManagementState') IS NULL CREATE DATABASE StudentManagementState;
 GO
 USE StudentManagementState;
 GO
 
--- Dropping existing tables
+-- Optional replace mode (destructive):
 IF OBJECT_ID('dbo.Enrollments','U') IS NOT NULL DROP TABLE dbo.Enrollments;
 IF OBJECT_ID('dbo.Courses','U')     IS NOT NULL DROP TABLE dbo.Courses;
-IF OBJECT_ID('dbo.Students','U')    IS NOT NULL DROP TABLE dbo.Students;
 IF OBJECT_ID('dbo.Instructors','U') IS NOT NULL DROP TABLE dbo.Instructors;
+IF OBJECT_ID('dbo.Students','U')    IS NOT NULL DROP TABLE dbo.Students;
 GO
 
 CREATE TABLE Students (
@@ -42,7 +42,7 @@ CREATE TABLE Enrollments (
     Id INT PRIMARY KEY IDENTITY,
     StudentId INT NOT NULL,
     CourseId INT NOT NULL,
-    Grade NVARCHAR(10),
+    FinalGrade NVARCHAR(10) NULL,  -- renamed in V5
     FOREIGN KEY (StudentId) REFERENCES Students(Id),
     FOREIGN KEY (CourseId) REFERENCES Courses(Id)
 );
