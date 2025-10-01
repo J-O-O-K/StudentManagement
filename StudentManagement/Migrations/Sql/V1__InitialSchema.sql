@@ -40,7 +40,7 @@ CREATE INDEX [IX_Enrollments_CourseId] ON [Enrollments] ([CourseId]);
 CREATE INDEX [IX_Enrollments_StudentId] ON [Enrollments] ([StudentId]);
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20251001011210_InitialSchema', N'9.0.9');
+VALUES (N'20251001013248_InitialSchema', N'9.0.9');
 
 COMMIT;
 GO
