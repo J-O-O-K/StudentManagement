@@ -17,7 +17,7 @@ Both approaches are version-controlled and use **feature branches** to show incr
 ### EF Code-First (Change-Based Migrations)
 
 Implemented using Entity Framework Core with incremental migrations and generated SQL artifacts.
-[View the EF branch here](https://github.com/J-O-O-K/StudentManagement/tree/feat/modify-course-credits-ef/StudentManagement)
+[View the EF branch here](https://github.com/J-O-O-K/StudentManagement/blob/feat/modify-course-credits-ef/StudentManagement/README.md)
 
 ### State-Based (Schema Diff)
 
@@ -30,4 +30,4 @@ Implemented using manually maintained SQL scripts that describe the target schem
 
 * Both approaches evolve the schema through the same sequence of changes (V1–V7).
 * Each branch contains its own **README.md**.
-* State based branch doesn't not use any type of migration tool, every step is done destructively.
+* State based branch doesn't use a migration tool to compare the database state with the new schema. Instead, every version is applied destructively (drop and recreate). In real-world practice, a state-based tool would generate non-destructive ALTER scripts to preserve data.
