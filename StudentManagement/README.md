@@ -7,7 +7,7 @@ Each migration is represented as a **versioned SQL artifact** (`state-based/V#__
 
 Unlike the EF Code-First (change-based) approach, here we:
 
-* Write SQL scripts manually (or maintain them in a tool).
+* Write SQL scripts manually.
 * Focus on **final state snapshots** rather than incremental changes.
 * Use simple drop-and-recreate scripts, as no data is affected.
 
