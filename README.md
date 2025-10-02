@@ -1,4 +1,4 @@
-# Student Management — Database Schema Migrations
+# Student Management - Database Schema Migrations
 
 ## Overview
 
